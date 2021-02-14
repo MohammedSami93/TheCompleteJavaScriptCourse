@@ -51,17 +51,48 @@ m tall.
 GOOD LUCK 😀
 */
 
-let markMass = 95;
-let johnMass = 85;
+// let markMass = 95;
+// let johnMass = 85;
 
-let markHight = 1.88;
-let johnHight = 1.76;
+// let markHight = 1.88;
+// let johnHight = 1.76;
 
-let markBMI = markMass / markHight ** 2;
-let johnBMI = johnMass / (johnHight * johnHight);
+// let markBMI = markMass / markHight ** 2;
+// let johnBMI = johnMass / (johnHight * johnHight);
 
-let markHigherBMI = markBMI > johnBMI;
+// let markHigherBMI = markBMI > johnBMI;
 
-console.log(markBMI);
-console.log(johnBMI);
-console.log(markHigherBMI);
+// console.log(markBMI);
+// console.log(johnBMI);
+// console.log(markHigherBMI);
+
+//////////////////////////////////////////////////////////////////////////
+
+
+// the ways of writing a string
+const firstName = "Mohammed";
+const job = "IT";
+const birthYear = 1993;
+const year = 2021;
+
+// way # 1
+const mohammed = "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+console.log(mohammed);
+
+// way # 2
+const newMohammed = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
+console.log(newMohammed);
+
+
+// the multiple lines...
+
+// way # 1
+console.log('String with \n\
+multiple \n\
+lines');
+
+// way # 2
+console.log(`String with
+multiple
+lines`);
+
