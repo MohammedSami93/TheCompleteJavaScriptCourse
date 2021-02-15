@@ -132,10 +132,38 @@ GOOD LUCK 😀
 
 /////////////////////////////////////////////////////
 
-let money = 10;
-if(money){  /* here it's mean.. IF money is True */
-    console.log(`you have ${money} SR.`)
+// let money = 10;
+// if(money){  /* here it's mean.. IF money is True */
+//     console.log(`you have ${money} SR.`)
+// } else {
+//     console.log(`you have NOTHING`)
+// }
+
+////////////////////////////////////////////////////
+
+// === vs. ==
+//const age = 18;
+const age = '18';
+if(age === 18)
+console.log('You just became an adult 😄 (Strict)');
+
+if(age == 18)
+console.log('You just became an adult 😄 (Loose)');
+
+
+const favNumber = Number(prompt('what is your favorite number?')); // without Number function prompt is a String
+console.log(favNumber);
+console.log(typeof favNumber);
+
+if(favNumber === 10){
+    console.log('10 is a cool number!');
+} else if(favNumber === 15){
+    console.log('15 is a cool number!');
 } else {
-    console.log(`you have NOTHING`)
+    console.log('number is not 10 or 15!');
 }
 
+// !== -> strict equaion, != -> loose
+if(favNumber !== 15){
+    console.log("why NOT 15?");
+}
