@@ -115,17 +115,27 @@ Hint: Use an if/else statement 😉
 GOOD LUCK 😀
 */
 
-let markMass = 95;
-let johnMass = 50;
+// let markMass = 95;
+// let johnMass = 50;
 
-let markHight = 1.88;
-let johnHight = 1.76;
+// let markHight = 1.88;
+// let johnHight = 1.76;
 
-let markBMI = markMass / markHight ** 2;
-let johnBMI = johnMass / (johnHight * johnHight);
+// let markBMI = markMass / markHight ** 2;
+// let johnBMI = johnMass / (johnHight * johnHight);
 
-if(markBMI > johnBMI){
-    console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})!`);
+// if(markBMI > johnBMI){
+//     console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})!`);
+// } else {
+//     console.log(`John's BMI (${johnBMI}) is higher than Mark's (${markBMI})!`);
+// }
+
+/////////////////////////////////////////////////////
+
+let money = 10;
+if(money){  /* here it's mean.. IF money is True */
+    console.log(`you have ${money} SR.`)
 } else {
-    console.log(`John's BMI (${johnBMI}) is higher than Mark's (${markBMI})!`);
+    console.log(`you have NOTHING`)
 }
+
