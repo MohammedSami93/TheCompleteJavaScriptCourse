@@ -143,27 +143,80 @@ GOOD LUCK 😀
 
 // === vs. ==
 //const age = 18;
-const age = '18';
-if(age === 18)
-console.log('You just became an adult 😄 (Strict)');
+// const age = '18';
+// if(age === 18)
+// console.log('You just became an adult 😄 (Strict)');
 
-if(age == 18)
-console.log('You just became an adult 😄 (Loose)');
+// if(age == 18)
+// console.log('You just became an adult 😄 (Loose)');
 
 
-const favNumber = Number(prompt('what is your favorite number?')); // without Number function prompt is a String
-console.log(favNumber);
-console.log(typeof favNumber);
+// const favNumber = Number(prompt('what is your favorite number?')); // without Number function prompt is a String
+// console.log(favNumber);
+// console.log(typeof favNumber);
 
-if(favNumber === 10){
-    console.log('10 is a cool number!');
-} else if(favNumber === 15){
-    console.log('15 is a cool number!');
+// if(favNumber === 10){
+//     console.log('10 is a cool number!');
+// } else if(favNumber === 15){
+//     console.log('15 is a cool number!');
+// } else {
+//     console.log('number is not 10 or 15!');
+// }
+
+// // !== -> strict equaion, != -> loose
+// if(favNumber !== 15){
+//     console.log("why NOT 15?");
+// }
+
+////////////////////////////////////////
+
+// Coding Challenge #3
+/* 
+There are two gymnastics teams, Dolphins and Koalas. They compete against each
+other 3 times. The winner with the highest average score wins a trophy!
+
+Your tasks:
+1. Calculate the average score for each team, using the test data below
+2. Compare the team's average scores to determine the winner of the competition,
+and print it to the console. Don't forget that there can be a draw, so test for that
+as well (draw means they have the same average score)
+3. Bonus 1: Include a requirement for a minimum score of 100. With this rule, a
+team only wins if it has a higher score than the other team, and the same time a
+score of at least 100 points. Hint: Use a logical operator to test for minimum
+score, as well as multiple else-if blocks 😉
+4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when
+both teams have the same score and both have a score greater or equal 100
+points. Otherwise, no team wins the trophy
+
+Test data:
+§ Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+§ Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+§ Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+
+GOOD LUCK 😀
+*/
+
+let dolphinScore1 = Number(prompt('Score #1 for Dolphin team:'));
+let dolphinScore2 = Number(prompt('Score #2 for Dolphin team:'));
+let dolphinScore3 = Number(prompt('Score #3 for Dolphin team:'));
+let dolphinAvrage = (dolphinScore1 + dolphinScore2 + dolphinScore3) / 3;
+
+let koalaScore1 = Number(prompt('Score #1 for Koala team:'));
+let koalaScore2 = Number(prompt('Score #2 for Koala team:'));
+let koalaScore3 = Number(prompt('Score #3 for Koala team:'));
+let koalaAvrage = (koalaScore1 + koalaScore2 + koalaScore3) / 3;
+
+console.log(`Dolphin Team Score is ${dolphinAvrage}
+Koala Team Score is ${koalaAvrage}`)
+
+if(dolphinAvrage > koalaAvrage){
+    console.log('Dolphin Team is the WINNER. 🎉');
+} else if(koalaAvrage > dolphinAvrage){
+    console.log('Koala Team is the WINNER. 🎉');
 } else {
-    console.log('number is not 10 or 15!');
+    console.log('Both teams are Winners, they have the same score. 🎉');
 }
 
-// !== -> strict equaion, != -> loose
-if(favNumber !== 15){
-    console.log("why NOT 15?");
-}
+
+
+
