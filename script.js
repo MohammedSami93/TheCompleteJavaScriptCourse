@@ -199,30 +199,58 @@ Test data:
 GOOD LUCK 😀
 */
 
-let dolphinScore1 = Number(prompt('Score #1 for Dolphin team:'));
-let dolphinScore2 = Number(prompt('Score #2 for Dolphin team:'));
-let dolphinScore3 = Number(prompt('Score #3 for Dolphin team:'));
-let dolphinAvrage = (dolphinScore1 + dolphinScore2 + dolphinScore3) / 3;
+// let dolphinScore1 = Number(prompt('Score #1 for Dolphin team:'));
+// let dolphinScore2 = Number(prompt('Score #2 for Dolphin team:'));
+// let dolphinScore3 = Number(prompt('Score #3 for Dolphin team:'));
+// let dolphinAvrage = (dolphinScore1 + dolphinScore2 + dolphinScore3) / 3;
 
-let koalaScore1 = Number(prompt('Score #1 for Koala team:'));
-let koalaScore2 = Number(prompt('Score #2 for Koala team:'));
-let koalaScore3 = Number(prompt('Score #3 for Koala team:'));
-let koalaAvrage = (koalaScore1 + koalaScore2 + koalaScore3) / 3;
+// let koalaScore1 = Number(prompt('Score #1 for Koala team:'));
+// let koalaScore2 = Number(prompt('Score #2 for Koala team:'));
+// let koalaScore3 = Number(prompt('Score #3 for Koala team:'));
+// let koalaAvrage = (koalaScore1 + koalaScore2 + koalaScore3) / 3;
 
-console.log(`Dolphin Team Score is ${dolphinAvrage}
-Koala Team Score is ${koalaAvrage}`)
+// console.log(`Dolphin Team Score is ${dolphinAvrage}
+// Koala Team Score is ${koalaAvrage}`)
 
 
-if(dolphinAvrage > koalaAvrage){
-    console.log('Dolphin Team is the WINNER. 🎉');
-} else if(koalaAvrage > dolphinAvrage){
-    console.log('Koala Team is the WINNER. 🎉');
-} else if (dolphinAvrage === koalaAvrage && dolphinAvrage >= 100 && koalaAvrage >= 100) {
-    console.log('Both teams are Winners, they have the same score. 🎉');
-} else {
-    console.log("No Winners")
+// if(dolphinAvrage > koalaAvrage){
+//     console.log('Dolphin Team is the WINNER. 🎉');
+// } else if(koalaAvrage > dolphinAvrage){
+//     console.log('Koala Team is the WINNER. 🎉');
+// } else if (dolphinAvrage === koalaAvrage && dolphinAvrage >= 100 && koalaAvrage >= 100) {
+//     console.log('Both teams are Winners, they have the same score. 🎉');
+// } else {
+//     console.log("No Winners")
+// }
+
+
+/////////////////////////////////////////////////////
+
+// Switch
+
+const day = 'thursday';
+
+switch (day) {
+    case 'sunday':
+        console.log('we are on sunday');
+        console.log('we still in sunday');
+        break;
+    case 'monday':
+        console.log('we are on monday');
+        break;
+    case 'tuesday':
+    case 'wednesday':
+        console.log('we are on Tuesday and wednesday');
+        break;
+    case 'thursday':
+        console.log('prepare for weekend');
+        break;
+    case 'friday':
+    case 'saturday':
+        console.log('have a nice weekend');
+        break;
+    default:
+        console.log('invalid value!');
+        break;
 }
-
-
-
 
