@@ -212,16 +212,15 @@ let koalaAvrage = (koalaScore1 + koalaScore2 + koalaScore3) / 3;
 console.log(`Dolphin Team Score is ${dolphinAvrage}
 Koala Team Score is ${koalaAvrage}`)
 
-if(dolphinAvrage >= 100 || koalaAvrage >= 100){    
-    if(dolphinAvrage > koalaAvrage){
-        console.log('Dolphin Team is the WINNER. 🎉');
-    } else if(koalaAvrage > dolphinAvrage && koalaAvrage >= 100){
-        console.log('Koala Team is the WINNER. 🎉');
-    } else {
-        console.log('Both teams are Winners, they have the same score. 🎉');
-    }
+
+if(dolphinAvrage > koalaAvrage){
+    console.log('Dolphin Team is the WINNER. 🎉');
+} else if(koalaAvrage > dolphinAvrage){
+    console.log('Koala Team is the WINNER. 🎉');
+} else if (dolphinAvrage === koalaAvrage && dolphinAvrage >= 100 && koalaAvrage >= 100) {
+    console.log('Both teams are Winners, they have the same score. 🎉');
 } else {
-    console.log("No Winners, Both of team's score are less than 100")
+    console.log("No Winners")
 }
 
 
