@@ -228,12 +228,12 @@ GOOD LUCK 😀
 
 // Switch
 
-const day = 'thursday';
+const day = 'sunday';
 
 switch (day) {
     case 'sunday':
         console.log('we are on sunday');
-        console.log('we still in sunday');
+        console.log('we still on sunday');
         break;
     case 'monday':
         console.log('we are on monday');
@@ -254,3 +254,18 @@ switch (day) {
         break;
 }
 
+
+if (day === 'sunday'){
+    console.log('we are on sunday');
+    console.log('we still on sunday');
+} else if(day === 'monday'){
+    console.log('we are on monday');
+} else if(day === 'tuesday' || day === 'wednesday'){
+    console.log('we are on Tuesday and wednesday');
+} else if(day === 'thursday'){
+    console.log('prepare for weekend');
+} else if(day === 'friday' || day === 'saturday'){
+    console.log('have a nice weekend');
+} else {
+    console.log('invalid value!');
+}
