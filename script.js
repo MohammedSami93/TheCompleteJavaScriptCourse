@@ -228,44 +228,56 @@ GOOD LUCK 😀
 
 // Switch
 
-const day = 'sunday';
+// const day = 'sunday';
 
-switch (day) {
-    case 'sunday':
-        console.log('we are on sunday');
-        console.log('we still on sunday');
-        break;
-    case 'monday':
-        console.log('we are on monday');
-        break;
-    case 'tuesday':
-    case 'wednesday':
-        console.log('we are on Tuesday and wednesday');
-        break;
-    case 'thursday':
-        console.log('prepare for weekend');
-        break;
-    case 'friday':
-    case 'saturday':
-        console.log('have a nice weekend');
-        break;
-    default:
-        console.log('invalid value!');
-        break;
-}
+// switch (day) {
+//     case 'sunday':
+//         console.log('we are on sunday');
+//         console.log('we still on sunday');
+//         break;
+//     case 'monday':
+//         console.log('we are on monday');
+//         break;
+//     case 'tuesday':
+//     case 'wednesday':
+//         console.log('we are on Tuesday and wednesday');
+//         break;
+//     case 'thursday':
+//         console.log('prepare for weekend');
+//         break;
+//     case 'friday':
+//     case 'saturday':
+//         console.log('have a nice weekend');
+//         break;
+//     default:
+//         console.log('invalid value!');
+//         break;
+// }
 
 
-if (day === 'sunday'){
-    console.log('we are on sunday');
-    console.log('we still on sunday');
-} else if(day === 'monday'){
-    console.log('we are on monday');
-} else if(day === 'tuesday' || day === 'wednesday'){
-    console.log('we are on Tuesday and wednesday');
-} else if(day === 'thursday'){
-    console.log('prepare for weekend');
-} else if(day === 'friday' || day === 'saturday'){
-    console.log('have a nice weekend');
-} else {
-    console.log('invalid value!');
-}
+// if (day === 'sunday'){
+//     console.log('we are on sunday');
+//     console.log('we still on sunday');
+// } else if(day === 'monday'){
+//     console.log('we are on monday');
+// } else if(day === 'tuesday' || day === 'wednesday'){
+//     console.log('we are on Tuesday and wednesday');
+// } else if(day === 'thursday'){
+//     console.log('prepare for weekend');
+// } else if(day === 'friday' || day === 'saturday'){
+//     console.log('have a nice weekend');
+// } else {
+//     console.log('invalid value!');
+// }
+
+//////////////////////////////////////////////////////////
+
+// The Conditional (Ternary) Operator
+
+const age = 28;
+// age >= 18 ? console.log("I am adult") : console.log("I am still young");
+
+const drive = age >= 15 ? 'have lisen 🚗' : "don't have lisen 🛑";
+console.log(drive);
+
+console.log(`I have a car and I ${age >= 15 ? 'have lisen 🚗' : "don't have lisen 🛑"}`);
