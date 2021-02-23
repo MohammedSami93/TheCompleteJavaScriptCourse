@@ -129,22 +129,72 @@ checkWinner(60, 60, 60, 50, 50, 50);
 */
 
 
-// Instructure Solytion //
+// // Instructure Solytion //
 
-const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
-//console.log(calcAverage(3,4,5));
+// const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+// //console.log(calcAverage(3,4,5));
 
-const scoreDolphin = calcAverage(44, 23, 71);
-const scoreKoalas = calcAverage(65, 54, 49);
-//console.log(scoreDolphin, scoreKoalas);
+// const scoreDolphin = calcAverage(44, 23, 71);
+// const scoreKoalas = calcAverage(65, 54, 49);
+// //console.log(scoreDolphin, scoreKoalas);
 
-function checkWinner(avgDolphins, avgKoalas){
-    if (avgDolphins >= avgKoalas*2){
-        console.log(`Dolphins win (${avgDolhins} vs. ${avgKoalas})`);
-    } else if (avgKoalas >= avgDolphins*2) {
-        console.log(`Koalas win (${avgKoalas} vs. ${avgDolhins})`);
-    } else {
-        console.log(`NO WINNER...`);
-    }
+// function checkWinner(avgDolphins, avgKoalas){
+//     if (avgDolphins >= avgKoalas*2){
+//         console.log(`Dolphins win (${avgDolhins} vs. ${avgKoalas})`);
+//     } else if (avgKoalas >= avgDolphins*2) {
+//         console.log(`Koalas win (${avgKoalas} vs. ${avgDolhins})`);
+//     } else {
+//         console.log(`NO WINNER...`);
+//     }
+// }
+// checkWinner(scoreDolphin, scoreKoalas);
+
+
+///////////////////////////////////////////////////////////////////////////
+
+/* ARRAYS */
+
+
+const friends = ['Amer', 'Mujtaba', 'Ali'];
+console.log(friends);
+
+// another way of decleration the array
+const year = new Array(1991, 1993, 1941, 5642);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length); /* to define how many elements it has */
+console.log(friends[friends.length - 1]);
+
+// change the element value
+friends[2] = 'Hassan';
+console.log(friends);
+
+// add elements to the array
+friends.push('new');
+console.log(friends);
+console.log(friends.length);
+
+// the flixability of array
+const firstName = 'Mohammed'
+const personalInformation = [firstName, 'Sami', 2021 - 1993, 'IT Support', friends];
+
+console.log(personalInformation);
+console.log(personalInformation.length);
+
+
+// Exercise //
+const calcAge = function(birthYear){
+    return 2021 - birthYear;
 }
-checkWinner(scoreDolphin, scoreKoalas);
+
+// want to calculate the ages
+const years = [1991, 1993, 2015, 2000];
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+
+console.log(age1, age2, age3);
+console.log(calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1]))
