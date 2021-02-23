@@ -155,46 +155,87 @@ checkWinner(60, 60, 60, 50, 50, 50);
 /* ARRAYS */
 
 
+// const friends = ['Amer', 'Mujtaba', 'Ali'];
+// console.log(friends);
+
+// // another way of decleration the array
+// const year = new Array(1991, 1993, 1941, 5642);
+
+// console.log(friends[0]);
+// console.log(friends[2]);
+
+// console.log(friends.length); /* to define how many elements it has */
+// console.log(friends[friends.length - 1]);
+
+// // change the element value
+// friends[2] = 'Hassan';
+// console.log(friends);
+
+// // add elements to the array
+// friends.push('new');
+// console.log(friends);
+// console.log(friends.length);
+
+// // the flixability of array
+// const firstName = 'Mohammed'
+// const personalInformation = [firstName, 'Sami', 2021 - 1993, 'IT Support', friends];
+
+// console.log(personalInformation);
+// console.log(personalInformation.length);
+
+
+// // Exercise //
+// const calcAge = function(birthYear){
+//     return 2021 - birthYear;
+// }
+
+// // want to calculate the ages
+// const years = [1991, 1993, 2015, 2000];
+
+// const age1 = calcAge(years[0]);
+// const age2 = calcAge(years[1]);
+// const age3 = calcAge(years[years.length - 1]);
+
+// console.log(age1, age2, age3);
+// console.log(calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1]))
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* Arrays methods */
+
+
 const friends = ['Amer', 'Mujtaba', 'Ali'];
+
+// to add element to the first of the array
+friends.unshift('Abdullah');
 console.log(friends);
 
-// another way of decleration the array
-const year = new Array(1991, 1993, 1941, 5642);
+// By the defult push function and unshift return the arrays length
+console.log(friends.push('Muneer'));
 
-console.log(friends[0]);
-console.log(friends[2]);
-
-console.log(friends.length); /* to define how many elements it has */
-console.log(friends[friends.length - 1]);
-
-// change the element value
-friends[2] = 'Hassan';
+// remove elements
+friends.pop(); // remove lase element
+friends.pop();
 console.log(friends);
 
-// add elements to the array
-friends.push('new');
+// pop function return the removed element ...
+console.log(friends.pop());
+
+// shift() is to remove the first element
+friends.shift();
 console.log(friends);
-console.log(friends.length);
 
-// the flixability of array
-const firstName = 'Mohammed'
-const personalInformation = [firstName, 'Sami', 2021 - 1993, 'IT Support', friends];
+// indexOf() is to return the position of element in the array
+console.log(friends.indexOf('Amer'));
+console.log(friends.indexOf('bgfdhngng')); // we'll get -1 if the element is NOT in the array
 
-console.log(personalInformation);
-console.log(personalInformation.length);
+// to check if the element in the array or not, that mean the result will be True or False
+console.log(friends.includes('Amer'));
+console.log(friends.includes('bgfdhngng'));
 
-
-// Exercise //
-const calcAge = function(birthYear){
-    return 2021 - birthYear;
+// example
+if (friends.includes('Amer')){
+    console.log('you have friends called Amer');
 }
-
-// want to calculate the ages
-const years = [1991, 1993, 2015, 2000];
-
-const age1 = calcAge(years[0]);
-const age2 = calcAge(years[1]);
-const age3 = calcAge(years[years.length - 1]);
-
-console.log(age1, age2, age3);
-console.log(calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1]))
