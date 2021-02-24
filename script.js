@@ -277,6 +277,11 @@ const calcTip = function(bill) {
 }
 // calcTip(100)
 
+// // another function
+// calcTip = function(bill) {
+//     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// }
+
 const bills = [125, 555, 44];
 console.log(`bill1: ${bills[0]}
 bill2: ${bills[1]}
