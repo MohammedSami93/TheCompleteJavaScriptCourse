@@ -318,3 +318,51 @@ const mohammed = {
     job: 'IT Support',
     friends: ['Amer', 'Mujtaba', 'Ali']
 }
+
+console.log(mohammed.lastName);
+console.log(mohammed['lastName']);
+
+
+const nameKey = 'Name';
+console.log(mohammed['first' + nameKey])
+console.log(mohammed['last' + nameKey])
+
+const interestedIn = prompt('What do you want to know about Mohammed? Choose one of the following: firstName, lastName, age, job, and friends');
+
+
+// this way it will NOT work
+// console.log(mohammed.interestedIn); 
+
+console.log(mohammed[interestedIn]);
+
+
+// try somthing different - object inside another object
+const mohammedSami = {
+    firstName: 'Mohammed',
+    lastName: 'Sami',
+    age: 2021 - 1993,
+    job: 'IT Support',
+    friends: {workFriend: 'Amer', 
+              bestFriend: 'Mujtaba', 
+              friend: 'Ali'
+            }
+}
+
+console.log(mohammedSami.friends.workFriend);
+
+
+// adding new proparty and its value
+mohammed.location = 'Khobar';
+mohammed['car'] = 'Camrey';
+
+console.log(mohammed);
+
+
+// Challenge
+// "Mohammed has 3 friends, and his best friend is called Mujtaba"
+console.log(`${mohammed.firstName} has ${mohammed.friends.length} friends, and his best friend is called ${mohammed['friends'][0]}`);
+// also we can do it like this
+console.log(`${mohammed.firstName} has ${mohammed.friends.length} friends, and his best friend is called ${mohammed.friends[0]}`);
+
+
+
