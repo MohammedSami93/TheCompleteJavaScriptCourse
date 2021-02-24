@@ -301,68 +301,126 @@ GOOD LUCK 😀
 
 /* Objects */
 
-// the Array
-const mohammedArray = [
-    'Mohammed',
-    'Sami',
-    2021 - 1993,
-    'IT Support',
-    ['Amer', 'Mujtaba', 'Ali']
-];
+// // the Array
+// const mohammedArray = [
+//     'Mohammed',
+//     'Sami',
+//     2021 - 1993,
+//     'IT Support',
+//     ['Amer', 'Mujtaba', 'Ali']
+// ];
 
-// the Object
+// // the Object
+// const mohammed = {
+//     firstName: 'Mohammed',
+//     lastName: 'Sami',
+//     age: 2021 - 1993,
+//     job: 'IT Support',
+//     friends: ['Amer', 'Mujtaba', 'Ali']
+// }
+
+// console.log(mohammed.lastName);
+// console.log(mohammed['lastName']);
+
+
+// const nameKey = 'Name';
+// console.log(mohammed['first' + nameKey])
+// console.log(mohammed['last' + nameKey])
+
+// const interestedIn = prompt('What do you want to know about Mohammed? Choose one of the following: firstName, lastName, age, job, and friends');
+
+
+// // this way it will NOT work
+// // console.log(mohammed.interestedIn); 
+
+// console.log(mohammed[interestedIn]);
+
+
+// // try somthing different - object inside another object
+// const mohammedSami = {
+//     firstName: 'Mohammed',
+//     lastName: 'Sami',
+//     age: 2021 - 1993,
+//     job: 'IT Support',
+//     friends: {workFriend: 'Amer', 
+//               bestFriend: 'Mujtaba', 
+//               friend: 'Ali'
+//             }
+// }
+
+// console.log(mohammedSami.friends.workFriend);
+
+
+// // adding new proparty and its value
+// mohammed.location = 'Khobar';
+// mohammed['car'] = 'Camrey';
+
+// console.log(mohammed);
+
+
+// // Challenge
+// // "Mohammed has 3 friends, and his best friend is called Mujtaba"
+// console.log(`${mohammed.firstName} has ${mohammed.friends.length} friends, and his best friend is called ${mohammed['friends'][0]}`);
+// // also we can do it like this
+// console.log(`${mohammed.firstName} has ${mohammed.friends.length} friends, and his best friend is called ${mohammed.friends[0]}`);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// // we can add any type of value in object, even if it's function
+// const mohammed = {
+//     firstName: 'Mohammed',
+//     lastName: 'Sami',
+//     birthYear: 1993,
+//     job: 'IT Support',
+//     friends: ['Amer', 'Mujtaba', 'Ali'],
+//     hasDriverLicense: true,
+//     calcAge: function (birthYear){
+//         return 2021 - birthYear;
+//     }
+// }
+
+// console.log(mohammed.calcAge(1993));
+// console.log(mohammed['calcAge'](1993));
+// console.log(mohammed['calcAge'](mohammed.birthYear));
+
+
+
+// exercise 2: 
 const mohammed = {
     firstName: 'Mohammed',
     lastName: 'Sami',
-    age: 2021 - 1993,
+    birthYear: 1993,
     job: 'IT Support',
-    friends: ['Amer', 'Mujtaba', 'Ali']
+    friends: ['Amer', 'Mujtaba', 'Ali'],
+    hasDriverLicense: true,
+    // way #1
+    // calcAge: function (){
+    //     return 2021 - this.birthYear; // this is to call the value of the parameter that in the same object
+    // }
+
+    // way #2
+    calcAge: function (){
+        this.age = 2021 - this.birthYear;
+        return  this.age;
+    },
+
+    getSummary: function() {
+        return `${this.firstName} is a ${this.age}-year old ${this.job}, and he has ${(this.hasDriverLicense) ? 'a' : 'NO'} driver's license`
+    }
 }
 
-console.log(mohammed.lastName);
-console.log(mohammed['lastName']);
-
-
-const nameKey = 'Name';
-console.log(mohammed['first' + nameKey])
-console.log(mohammed['last' + nameKey])
-
-const interestedIn = prompt('What do you want to know about Mohammed? Choose one of the following: firstName, lastName, age, job, and friends');
-
-
-// this way it will NOT work
-// console.log(mohammed.interestedIn); 
-
-console.log(mohammed[interestedIn]);
-
-
-// try somthing different - object inside another object
-const mohammedSami = {
-    firstName: 'Mohammed',
-    lastName: 'Sami',
-    age: 2021 - 1993,
-    job: 'IT Support',
-    friends: {workFriend: 'Amer', 
-              bestFriend: 'Mujtaba', 
-              friend: 'Ali'
-            }
-}
-
-console.log(mohammedSami.friends.workFriend);
-
-
-// adding new proparty and its value
-mohammed.location = 'Khobar';
-mohammed['car'] = 'Camrey';
-
-console.log(mohammed);
+console.log(mohammed.calcAge());
+console.log(mohammed['calcAge']());
+console.log(mohammed.age);
 
 
 // Challenge
-// "Mohammed has 3 friends, and his best friend is called Mujtaba"
-console.log(`${mohammed.firstName} has ${mohammed.friends.length} friends, and his best friend is called ${mohammed['friends'][0]}`);
-// also we can do it like this
-console.log(`${mohammed.firstName} has ${mohammed.friends.length} friends, and his best friend is called ${mohammed.friends[0]}`);
+// "Mohammed is a 46-year old IT Support, and he has a driver's license"
 
+// this's through the console
+console.log(`${mohammed.firstName} is a ${mohammed.age}-year old ${mohammed.job}, and he has ${mohammed.hasDriverLicense ? 'a' : 'NO'} driver's license`);
 
+// here through new function getSummary() and using this
+console.log(mohammed.getSummary())
 
