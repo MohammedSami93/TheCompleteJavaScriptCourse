@@ -264,35 +264,57 @@ Test data: 125, 555 and 44
 GOOD LUCK 😀
 */
 
-const calcTip = function(bill) {
-    if(bill >= 50 && bill <= 300){
-        const tip = bill * 0.15;
-        //console.log(tip);
-        return tip;
-    } else {
-        const tip = bill * 0.2;
-        //console.log(tip);
-        return tip;
-    }
-}
-// calcTip(100)
-
-// // another function
-// calcTip = function(bill) {
-//     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// const calcTip = function(bill) {
+//     if(bill >= 50 && bill <= 300){
+//         const tip = bill * 0.15;
+//         //console.log(tip);
+//         return tip;
+//     } else {
+//         const tip = bill * 0.2;
+//         //console.log(tip);
+//         return tip;
+//     }
 // }
+// // calcTip(100)
 
-const bills = [125, 555, 44];
-console.log(`bill1: ${bills[0]}
-bill2: ${bills[1]}
-bill3: ${bills[2]}`);
+// // // another function
+// // calcTip = function(bill) {
+// //     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// // }
 
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-console.log(`tip1: ${tips[0]}
-tip2: ${tips[1]}
-tip3: ${tips[2]}`);
+// const bills = [125, 555, 44];
+// console.log(`bill1: ${bills[0]}
+// bill2: ${bills[1]}
+// bill3: ${bills[2]}`);
 
-const total = [bills[0]+tips[0], bills[1]+tips[1], bills[2]+tips[2]];
-console.log(`total1: ${total[0]}
-total2: ${total[1]}
-total3: ${total[2]}`);
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// console.log(`tip1: ${tips[0]}
+// tip2: ${tips[1]}
+// tip3: ${tips[2]}`);
+
+// const total = [bills[0]+tips[0], bills[1]+tips[1], bills[2]+tips[2]];
+// console.log(`total1: ${total[0]}
+// total2: ${total[1]}
+// total3: ${total[2]}`);
+
+////////////////////////////////////////////////////////////////////////////////
+
+/* Objects */
+
+// the Array
+const mohammedArray = [
+    'Mohammed',
+    'Sami',
+    2021 - 1993,
+    'IT Support',
+    ['Amer', 'Mujtaba', 'Ali']
+];
+
+// the Object
+const mohammed = {
+    firstName: 'Mohammed',
+    lastName: 'Sami',
+    age: 2021 - 1993,
+    job: 'IT Support',
+    friends: ['Amer', 'Mujtaba', 'Ali']
+}
