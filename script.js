@@ -386,41 +386,90 @@ GOOD LUCK 😀
 
 
 
-// exercise 2: 
-const mohammed = {
-    firstName: 'Mohammed',
-    lastName: 'Sami',
-    birthYear: 1993,
-    job: 'IT Support',
-    friends: ['Amer', 'Mujtaba', 'Ali'],
-    hasDriverLicense: true,
-    // way #1
-    // calcAge: function (){
-    //     return 2021 - this.birthYear; // this is to call the value of the parameter that in the same object
-    // }
+// // exercise 2: 
+// const mohammed = {
+//     firstName: 'Mohammed',
+//     lastName: 'Sami',
+//     birthYear: 1993,
+//     job: 'IT Support',
+//     friends: ['Amer', 'Mujtaba', 'Ali'],
+//     hasDriverLicense: true,
+//     // way #1
+//     // calcAge: function (){
+//     //     return 2021 - this.birthYear; // this is to call the value of the parameter that in the same object
+//     // }
 
-    // way #2
-    calcAge: function (){
-        this.age = 2021 - this.birthYear;
-        return  this.age;
-    },
+//     // way #2
+//     calcAge: function (){
+//         this.age = 2021 - this.birthYear;
+//         return  this.age;
+//     },
 
-    getSummary: function() {
-        return `${this.firstName} is a ${this.age}-year old ${this.job}, and he has ${(this.hasDriverLicense) ? 'a' : 'NO'} driver's license`
+//     getSummary: function() {
+//         return `${this.firstName} is a ${this.age}-year old ${this.job}, and he has ${(this.hasDriverLicense) ? 'a' : 'NO'} driver's license`
+//     }
+// }
+
+// console.log(mohammed.calcAge());
+// console.log(mohammed['calcAge']());
+// console.log(mohammed.age);
+
+
+// // Challenge
+// // "Mohammed is a 46-year old IT Support, and he has a driver's license"
+
+// // this's through the console
+// console.log(`${mohammed.firstName} is a ${mohammed.age}-year old ${mohammed.job}, and he has ${mohammed.hasDriverLicense ? 'a' : 'NO'} driver's license`);
+
+// // here through new function getSummary() and using this
+// console.log(mohammed.getSummary())
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Coding Challenge #3
+
+/*
+Let's go back to Mark and John comparing their BMIs! This time, let's use objects to
+implement the calculations! Remember: BMI = mass / height ** 2 = mass
+/ (height * height) (mass in kg and height in meter)
+
+Your tasks:
+1. For each of them, create an object with properties for their full name, mass, and
+height (Mark Miller and John Smith)
+2. Create a 'calcBMI' method on each object to calculate the BMI (the same
+method on both objects). Store the BMI value to a property, and also return it
+from the method
+3. Log to the console who has the higher BMI, together with the full name and the
+respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
+
+Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m
+tall.
+
+GOOD LUCK 😀
+*/
+
+const mark = {
+    fullName: 'Mark',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function() {
+        return this.mass / (this.height ** 2);
     }
 }
 
-console.log(mohammed.calcAge());
-console.log(mohammed['calcAge']());
-console.log(mohammed.age);
+const john = {
+    fullName: 'John',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function() {
+        return this.mass / (this.height ** 2);
+    }
+}
 
-
-// Challenge
-// "Mohammed is a 46-year old IT Support, and he has a driver's license"
-
-// this's through the console
-console.log(`${mohammed.firstName} is a ${mohammed.age}-year old ${mohammed.job}, and he has ${mohammed.hasDriverLicense ? 'a' : 'NO'} driver's license`);
-
-// here through new function getSummary() and using this
-console.log(mohammed.getSummary())
-
+if (mark.calcBMI() > john.calcBMI()){
+    console.log(`${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${john.fullName}'s (${john.calcBMI()})!`);
+} else if (john.calcBMI() > mark.calcBMI()) {
+    console.log(`${john.fullName}'s BMI (${john.calcBMI()}) is higher than ${mark.fullName}'s (${mark.calcBMI()})!`);
+} else {
+    console.log(`No Winner...`);
+}
