@@ -479,63 +479,86 @@ GOOD LUCK 😀
 
 /* for loop */
 
-for(let rep = 1; rep <= 10; rep++){
-    console.log(`Lifting weights repetition ${rep} 🏋🏼‍♂️`);
+// for(let rep = 1; rep <= 10; rep++){
+//     console.log(`Lifting weights repetition ${rep} 🏋🏼‍♂️`);
+// }
+
+
+// const mohammedArray = [
+//     'Mohammed',
+//     'Sami',
+//     2021 - 1993,
+//     'IT Support',
+//     ['Amer', 'Mujtaba', 'Ali']
+// ];
+
+// const types = [];
+
+// for(let i=0; i < mohammedArray.length; i++){
+//     // reading from mohammedArray
+//     console.log(mohammedArray[i], typeof mohammedArray[i]);
+
+//     // adding, filling new values to an empty array:
+//     // way #1
+//     // types[i] = typeof mohammedArray[i];
+
+//     // way #2
+//     types.push(typeof mohammedArray[i]);
+// }
+
+// console.log(types);
+
+
+
+
+// const years = [1993, 1990, 2000, 2015];
+// const ages = [];
+
+// for(let i = 0; i < years.length; i++){
+//     // way #1
+//     // ages[i] = 2021 - years[i];
+
+//     // way #2
+//     ages.push(2021 - years[i]);
+// }
+
+// console.log(ages);
+
+// // continue and break 
+// console.log("=== ONLEY STRING ===");
+// for(let i=0; i < mohammedArray.length; i++){
+//     if(typeof mohammedArray[i] !== "string") continue;
+
+//     console.log(mohammedArray[i], typeof mohammedArray[i]);
+// }
+
+
+// console.log("=== BREAK WITH NUMBERS ===");
+// for(let i=0; i < mohammedArray.length; i++){
+//     if(typeof mohammedArray[i] === "number") break;
+
+//     console.log(mohammedArray[i], typeof mohammedArray[i]);
+// }
+
+
+/////////////////////////////////////////////////////////////////////
+
+for(let i = 0; i <= 10; i++){
+    // console.log(`for loop: player ${i}`);
 }
 
-
-const mohammedArray = [
-    'Mohammed',
-    'Sami',
-    2021 - 1993,
-    'IT Support',
-    ['Amer', 'Mujtaba', 'Ali']
-];
-
-const types = [];
-
-for(let i=0; i < mohammedArray.length; i++){
-    // reading from mohammedArray
-    console.log(mohammedArray[i], typeof mohammedArray[i]);
-
-    // adding, filling new values to an empty array:
-    // way #1
-    // types[i] = typeof mohammedArray[i];
-
-    // way #2
-    types.push(typeof mohammedArray[i]);
+let i = 0
+while(i <= 10){
+    // console.log(`while loop: player ${i}`);
+    i++;
 }
 
-console.log(types);
+// this line is to export random dicemal number between 1 & 10
+let dice = Math.trunc(Math.random() * 10 + 1);
 
-
-
-
-const years = [1993, 1990, 2000, 2015];
-const ages = [];
-
-for(let i = 0; i < years.length; i++){
-    // way #1
-    // ages[i] = 2021 - years[i];
-
-    // way #2
-    ages.push(2021 - years[i]);
+while (dice !== 6){
+    console.log(`the number is: ${dice}`);
+    dice = Math.trunc(Math.random() * 10 + 1);
+    if (dice === 6) console.log(`you got ${dice}, so it's the end of the game!`)
 }
 
-console.log(ages);
-
-// continue and break 
-console.log("=== ONLEY STRING ===");
-for(let i=0; i < mohammedArray.length; i++){
-    if(typeof mohammedArray[i] !== "string") continue;
-
-    console.log(mohammedArray[i], typeof mohammedArray[i]);
-}
-
-
-console.log("=== BREAK WITH NUMBERS ===");
-for(let i=0; i < mohammedArray.length; i++){
-    if(typeof mohammedArray[i] === "number") break;
-
-    console.log(mohammedArray[i], typeof mohammedArray[i]);
-}
