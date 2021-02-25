@@ -448,28 +448,94 @@ tall.
 GOOD LUCK 😀
 */
 
-const mark = {
-    fullName: 'Mark',
-    mass: 78,
-    height: 1.69,
-    calcBMI: function() {
-        return this.mass / (this.height ** 2);
-    }
+// const mark = {
+//     fullName: 'Mark',
+//     mass: 78,
+//     height: 1.69,
+//     calcBMI: function() {
+//         return this.mass / (this.height ** 2);
+//     }
+// }
+
+// const john = {
+//     fullName: 'John',
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function() {
+//         return this.mass / (this.height ** 2);
+//     }
+// }
+
+// if (mark.calcBMI() > john.calcBMI()){
+//     console.log(`${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${john.fullName}'s (${john.calcBMI()})!`);
+// } else if (john.calcBMI() > mark.calcBMI()) {
+//     console.log(`${john.fullName}'s BMI (${john.calcBMI()}) is higher than ${mark.fullName}'s (${mark.calcBMI()})!`);
+// } else {
+//     console.log(`No Winner...`);
+// }
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/* for loop */
+
+for(let rep = 1; rep <= 10; rep++){
+    console.log(`Lifting weights repetition ${rep} 🏋🏼‍♂️`);
 }
 
-const john = {
-    fullName: 'John',
-    mass: 92,
-    height: 1.95,
-    calcBMI: function() {
-        return this.mass / (this.height ** 2);
-    }
+
+const mohammedArray = [
+    'Mohammed',
+    'Sami',
+    2021 - 1993,
+    'IT Support',
+    ['Amer', 'Mujtaba', 'Ali']
+];
+
+const types = [];
+
+for(let i=0; i < mohammedArray.length; i++){
+    // reading from mohammedArray
+    console.log(mohammedArray[i], typeof mohammedArray[i]);
+
+    // adding, filling new values to an empty array:
+    // way #1
+    // types[i] = typeof mohammedArray[i];
+
+    // way #2
+    types.push(typeof mohammedArray[i]);
 }
 
-if (mark.calcBMI() > john.calcBMI()){
-    console.log(`${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${john.fullName}'s (${john.calcBMI()})!`);
-} else if (john.calcBMI() > mark.calcBMI()) {
-    console.log(`${john.fullName}'s BMI (${john.calcBMI()}) is higher than ${mark.fullName}'s (${mark.calcBMI()})!`);
-} else {
-    console.log(`No Winner...`);
+console.log(types);
+
+
+
+
+const years = [1993, 1990, 2000, 2015];
+const ages = [];
+
+for(let i = 0; i < years.length; i++){
+    // way #1
+    // ages[i] = 2021 - years[i];
+
+    // way #2
+    ages.push(2021 - years[i]);
+}
+
+console.log(ages);
+
+// continue and break 
+console.log("=== ONLEY STRING ===");
+for(let i=0; i < mohammedArray.length; i++){
+    if(typeof mohammedArray[i] !== "string") continue;
+
+    console.log(mohammedArray[i], typeof mohammedArray[i]);
+}
+
+
+console.log("=== BREAK WITH NUMBERS ===");
+for(let i=0; i < mohammedArray.length; i++){
+    if(typeof mohammedArray[i] === "number") break;
+
+    console.log(mohammedArray[i], typeof mohammedArray[i]);
 }
