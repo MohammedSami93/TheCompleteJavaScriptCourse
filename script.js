@@ -11,7 +11,7 @@
 //////////////////////////////////////////////////////////////
 
 /* Create a random number */
-const secretNumber = Math.trunc(
+let secretNumber = Math.trunc(
   Math.random() * Number(document.querySelector('.maxGuess').textContent) + 1
 );
 
@@ -72,7 +72,7 @@ document.querySelector('.check').addEventListener('click', function () {
 });
 
 document.querySelector('.again').addEventListener('click', function () {
-  const secretNumber = Math.trunc(
+  secretNumber = Math.trunc(
     Math.random() * Number(document.querySelector('.maxGuess').textContent) + 1
   );
   document.querySelector('.message').textContent = 'Start guessing...';
