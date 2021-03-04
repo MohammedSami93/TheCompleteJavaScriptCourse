@@ -70,3 +70,16 @@ document.querySelector('.check').addEventListener('click', function () {
     }
   }
 });
+
+document.querySelector('.again').addEventListener('click', function () {
+  const secretNumber = Math.trunc(
+    Math.random() * Number(document.querySelector('.maxGuess').textContent) + 1
+  );
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('.score').textContent = scoreAgain;
+  score = scoreAgain;
+  document.querySelector('.number').style.width = '15rem';
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.guess').value = '';
+});
