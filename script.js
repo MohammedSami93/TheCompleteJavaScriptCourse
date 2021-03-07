@@ -32,6 +32,11 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.number').textContent = secretNumber;
     document.querySelector('body').style.backgroundColor = '#6ac1E9';
     document.querySelector('.number').style.width = '30rem';
+    // High score
+    let highscore = Number(document.querySelector('.highscore').textContent);
+    if (score > highscore) {
+      document.querySelector('.highscore').textContent = score;
+    }
   } else if (guess > secretNumber) {
     if (score > 1) {
       if (guess - secretNumber > 5) {
@@ -76,11 +81,6 @@ document.querySelector('.again').addEventListener('click', function () {
   secretNumber = Math.trunc(
     Math.random() * Number(document.querySelector('.maxGuess').textContent) + 1
   );
-  // High score
-  let highscore = Number(document.querySelector('.highscore').textContent);
-  if (score > highscore) {
-    document.querySelector('.highscore').textContent = score;
-  }
   document.querySelector('.message').textContent = 'Start guessing...';
   document.querySelector('.score').textContent = scoreAgain;
   score = scoreAgain;
