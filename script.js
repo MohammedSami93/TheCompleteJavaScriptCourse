@@ -71,10 +71,16 @@ document.querySelector('.check').addEventListener('click', function () {
   }
 });
 
+/* Again Button */
 document.querySelector('.again').addEventListener('click', function () {
   secretNumber = Math.trunc(
     Math.random() * Number(document.querySelector('.maxGuess').textContent) + 1
   );
+  // High score
+  let highscore = Number(document.querySelector('.highscore').textContent);
+  if (score > highscore) {
+    document.querySelector('.highscore').textContent = score;
+  }
   document.querySelector('.message').textContent = 'Start guessing...';
   document.querySelector('.score').textContent = scoreAgain;
   score = scoreAgain;
